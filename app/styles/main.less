@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Roboto+Condensed:400,700,300);
+
+//VARIABLES
+@import "ldvVariables.less";
+
+//UTILS
+@import "ldvUtils.less";
+
+
+/************************/
+/*		STYLE		   */
+/***********************/
+
+html{ height: 100%; }
+
+body{
+	background-color : @black-voodoo !important;
+	color : @white-voodoo !important;
+	font-family: @roboto !important;
+	//
+	min-height: 100%;
+	height: 100%;
+
+	//HEADER
+	header{
+		padding-top: 20px;
+		z-index: 2000;
+		position: relative;
+		height: 80px;    
+
+		.row{
+			width: ~"calc(100% - 30px)";
+			margin : 0 auto 10px;
+		}
+		#js-menuShow{
+			margin-left: 40px;
+			width: 68px;
+			height: 58px;
+			text-align: center;
+
+			a{
+				.btnMenuShowHide
+			}
+		}
+	}
+	
+
+	//NAV
+	
+	@import "ldvNav.less";
+	//INDEX
+	@import "ldvIntro.less";
+	
+	.borderedContainer{
+		width: calc(~"100% -"@marginBorderedBox*2);
+		margin: 10px auto;
+		min-height: calc(~"100% - "@marginBorderedBox*2);
+		background: red;
+
+		width: 100%;
+		margin: 0px auto;
+		
+		background: @white-voodoo;
+		border: @marginBorderedBox solid @black-voodoo;
+		width: 100%;
+		min-height: 100%;
+
+	}
+
+	//Index 2
+	@import "ldvYoh.less";
+
+	//Work
+	@import "ldvWork.less";
+
+	//Projet
+	@import "ldvProjet.less";
+
+	//Contact
+	@import "ldvContact";
+
+	//About
+	@import "ldvAbout.less";
+}

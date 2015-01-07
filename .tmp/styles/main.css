@@ -1,0 +1,959 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Roboto+Condensed:400,700,300);
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.hidden {
+  opacity: 0;
+  display: none;
+}
+.visible {
+  opacity: 1;
+  display: block;
+}
+.visibleInline {
+  opacity: 1;
+  display: block;
+  display: inline;
+}
+.borderedContainerIntroState {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+.animate {
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+}
+.ldv-btn {
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #fff;
+  display: block;
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+}
+.ldv-btn:hover {
+  color: #000;
+  background: #fff;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+.ldv-btn span {
+  opacity: 1;
+  display: block;
+  display: inline;
+}
+.ldv-btn i {
+  opacity: 0;
+  display: none;
+}
+.ldv-btn:hover i,
+.ldv-btn:active i {
+  opacity: 1;
+  display: block;
+  display: inline;
+  font-size: 25px;
+}
+.ldv-btn:hover span,
+.ldv-btn:active span {
+  opacity: 0;
+  display: none;
+}
+.headLine {
+  text-transform: uppercase;
+  color: #b5b5b5;
+  margin-bottom: 5px;
+  font-size: 18px;
+  padding-bottom: 6px;
+  border-bottom: 1px dotted #b5b5b5;
+}
+.scaledContainer {
+  -webkit-transform: scale(0.95, 0.95);
+      -ms-transform: scale(0.95, 0.95);
+          transform: scale(0.95, 0.95);
+}
+.btnMenuShowHide {
+  font-size: 3.1em;
+  font-size: 44px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  line-height: 50px;
+  color: #000;
+  border: 1px solid transparent;
+}
+.btnMenuShowHide:hover,
+.btnMenuShowHide:active {
+  border: 1px solid black;
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+}
+letscroll from {
+  margin-top: -15px;
+}
+letscroll to {
+  margin-top: 15px;
+}
+.shapeTriangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid #fff;
+}
+/************************/
+/*		STYLE		   */
+/***********************/
+html {
+  height: 100%;
+}
+body {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  font-family: 'Roboto', sans-serif !important;
+  min-height: 100%;
+  height: 100%;
+}
+body header {
+  padding-top: 20px;
+  z-index: 2000;
+  position: relative;
+  height: 80px;
+}
+body header .row {
+  width: calc(100% - 30px);
+  margin: 0 auto 10px;
+}
+body header #js-menuShow {
+  margin-left: 40px;
+  width: 68px;
+  height: 58px;
+  text-align: center;
+}
+body header #js-menuShow a {
+  font-size: 3.1em;
+  font-size: 44px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  line-height: 50px;
+  color: #000;
+  border: 1px solid transparent;
+}
+body header #js-menuShow a:hover,
+body header #js-menuShow a:active {
+  border: 1px solid black;
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+}
+body nav {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  opacity: 0;
+  z-index: 1000;
+}
+body nav .row {
+  height: 100%;
+  margin: 0 !important;
+}
+body nav .menuContainer {
+  background: #fff;
+  height: 100%;
+  text-align: center;
+  padding: 0!important;
+  margin: 0 auto;
+}
+body nav .menuContainer #js-menuHide {
+  width: 68px;
+  height: 58px;
+  margin-left: 49px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+body nav .menuContainer #js-menuHide a {
+  font-size: 3.1em;
+  font-size: 44px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  line-height: 50px;
+  color: #000;
+  border: 1px solid transparent;
+}
+body nav .menuContainer #js-menuHide a:hover,
+body nav .menuContainer #js-menuHide a:active {
+  border: 1px solid black;
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+}
+body nav .menuContainer .logoMenuContainer {
+  margin: 0 auto 28px;
+}
+body nav .menuContainer ul.ldvMenu {
+  width: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 200;
+}
+body nav .menuContainer ul.ldvMenu li {
+  height: 64px;
+  font-size: 36px;
+  text-transform: uppercase;
+  background: none;
+}
+body nav .menuContainer ul.ldvMenu li a {
+  color: #111111;
+  background: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 62px;
+  position: relative;
+}
+body nav .menuContainer ul.ldvMenu li a:hover,
+body nav .menuContainer ul.ldvMenu li a:active {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: color 0.25s ease 0.125s;
+          transition: color 0.25s ease 0.125s;
+}
+body nav .menuContainer ul.ldvMenu li a:hover .bgMenuInput,
+body nav .menuContainer ul.ldvMenu li a:active .bgMenuInput {
+  left: 0;
+  right: auto;
+  background: #b5b5b5;
+  -webkit-transition: left 0.3s ease;
+          transition: left 0.3s ease;
+}
+body nav .menuContainer ul.ldvMenu li a:hover .bgMenuInput:hover,
+body nav .menuContainer ul.ldvMenu li a:active .bgMenuInput:hover {
+  right: 0;
+  left: auto;
+  -webkit-transition: right 0.3s ease;
+          transition: right 0.3s ease;
+}
+body nav .menuContainer ul.ldvMenu li a.active {
+  background: #111111;
+}
+body nav .menuContainer ul.ldvMenu li a .bgMenuInput {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  right: 0;
+}
+body nav .menuContainer ul.ldvMenu li a .txtLink {
+  position: relative;
+}
+body nav .menuContainer .separatorMenu {
+  width: 150px;
+  height: 1px;
+  margin: 24px auto 12px;
+  background: #111111;
+}
+body nav .menuContainer ul.socialLinks {
+  font-size: 24px;
+  margin: 20px auto;
+  display: inline-block;
+}
+body nav .menuContainer ul.socialLinks:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body nav .menuContainer ul.socialLinks li {
+  float: left;
+  position: relative;
+  list-style: none;
+  margin-right: 30px;
+}
+body nav .menuContainer ul.socialLinks li a {
+  color: #b5b5b5;
+  -webkit-transition: color 0.3s ease-in;
+          transition: color 0.3s ease-in;
+}
+body nav .menuContainer ul.socialLinks li a:hover,
+body nav .menuContainer ul.socialLinks li a:active {
+  color: #111111;
+}
+body nav .menuContainer ul.socialLinks li:last-child {
+  margin-right: 0;
+}
+body nav .funFactContainer {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  padding: 0;
+  position: relative;
+}
+body nav .funFactContainer .separatorMenu {
+  width: 100%;
+  height: 12px;
+  background: #fff;
+}
+body nav .funFactContainer .separatorMenu:last-child {
+  position: absolute;
+  bottom: 0;
+}
+body nav .funFactContainer .ffZoneOuter {
+  border-right: 12px solid #fff;
+  height: calc(100% - 12px);
+  padding-top: 12%;
+}
+body nav .funFactContainer .ffZoneOuter #ffZone {
+  margin: 0 auto;
+  width: 320px;
+  text-align: center;
+}
+body nav .funFactContainer .ffZoneOuter #ffZone .ffTitle {
+  background: #fff;
+  padding: 11px 19px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 200;
+  font-size: 30px;
+  color: #000;
+}
+body nav .funFactContainer .ffZoneOuter #ffZone .ffQuote {
+  color: #fff;
+  padding: 16px 0;
+  border: 1px solid #fff;
+  border-left: none;
+  border-right: none;
+  margin: 24px 0;
+  font-weight: 200;
+  font-size: 18px;
+}
+body nav .funFactContainer .ffZoneOuter #ffZone .ffbtn {
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #fff;
+  display: block;
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+  width: 100%;
+  height: 42px;
+  line-height: 40px;
+  -webkit-transition: background 0.2s ease-in-out;
+          transition: background 0.2s ease-in-out;
+}
+body nav .funFactContainer .ffZoneOuter #ffZone .ffbtn:hover {
+  color: #000;
+  background: #fff;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+body nav .funFactContainer .ffZoneOuter #ffZone .ffbtn span {
+  opacity: 1;
+  display: block;
+  display: inline;
+}
+body nav .funFactContainer .ffZoneOuter #ffZone .ffbtn i {
+  opacity: 0;
+  display: none;
+}
+body nav .funFactContainer .ffZoneOuter #ffZone .ffbtn:hover i,
+body nav .funFactContainer .ffZoneOuter #ffZone .ffbtn:active i {
+  opacity: 1;
+  display: block;
+  display: inline;
+  font-size: 25px;
+}
+body nav .funFactContainer .ffZoneOuter #ffZone .ffbtn:hover span,
+body nav .funFactContainer .ffZoneOuter #ffZone .ffbtn:active span {
+  opacity: 0;
+  display: none;
+}
+body nav .funFactContainer .ffZoneOuter #ffZone .ffbtn:hover,
+body nav .funFactContainer .ffZoneOuter #ffZone .ffbtn:active {
+  line-height: 46px;
+}
+body #ldvIntro {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  position: relative;
+  z-index: 1000;
+  top: 0px;
+}
+body #ldvIntro #ldvLogo {
+  border: 1px solid #000;
+}
+body #ldvIntro #ldvLogo .logoContainer {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+body #ldvIntro #ldvLogo .logoContainer svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+body #ldvIntro .captionLogo {
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 100;
+  margin-top: 30%;
+  font-size: 18px;
+  color: #000;
+  background: #fff;
+}
+body .borderedContainer {
+  width: calc(100% - 20px);
+  margin: 10px auto;
+  min-height: calc(100% -  20px);
+  background: red;
+  margin: 0px auto;
+  background: #ffffff;
+  border: 10px solid #111111;
+  width: 100%;
+  min-height: 100%;
+}
+body #ldvYoh {
+  height: 100%;
+  width: 100%;
+  /* CHANGE */
+  background: url("../images/bgYoh.jpg") center no-repeat;
+  position: relative;
+  padding: 10% 0 15% 0;
+  text-align: center;
+  line-height: 2em;
+}
+body #ldvYoh h1 {
+  display: inline-block;
+  width: 350px;
+  padding-bottom: 15px;
+  border-bottom: 1px dotted #fff;
+  font-weight: 100;
+  font-size: 50px;
+  line-height: 50px;
+}
+body #ldvYoh p {
+  font-size: 15px;
+}
+body #ldvYoh a {
+  color: #e1e1e1;
+  text-decoration: overline;
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+}
+body #ldvYoh a:hover,
+body #ldvYoh a:active {
+  color: #111111;
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+}
+body #ldvYoh a.goContact {
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #fff;
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+  width: 200px;
+  display: block;
+  margin: 32px auto;
+  padding: 4px 0;
+}
+body #ldvYoh a.goContact:hover {
+  color: #000;
+  background: #fff;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+body #ldvYoh a.goContact span {
+  opacity: 1;
+  display: block;
+  display: inline;
+}
+body #ldvYoh a.goContact i {
+  opacity: 0;
+  display: none;
+}
+body #ldvYoh a.goContact:hover i,
+body #ldvYoh a.goContact:active i {
+  opacity: 1;
+  display: block;
+  display: inline;
+  font-size: 25px;
+}
+body #ldvYoh a.goContact:hover span,
+body #ldvYoh a.goContact:active span {
+  opacity: 0;
+  display: none;
+}
+body #ldvWork .container .col-md-5 {
+  background: yellow;
+}
+body #ldvWork .projetBox {
+  display: block;
+  margin: 0 auto 60px;
+  height: auto;
+  width: auto;
+  text-decoration: none;
+}
+body #ldvWork .projetBox:hover,
+body #ldvWork .projetBox:active {
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+}
+body #ldvWork .projetBox:hover .overlayVisuel,
+body #ldvWork .projetBox:active .overlayVisuel {
+  background: rgba(75, 75, 75, 0.6);
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+body #ldvWork .projetBox:hover .infoMin,
+body #ldvWork .projetBox:active .infoMin {
+  bottom: 40%;
+  opacity: 1;
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+body #ldvWork .projetBox:hover .infoMin h2,
+body #ldvWork .projetBox:active .infoMin h2 {
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+  background-color: #fff;
+  color: #111111;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+body #ldvWork .projetBox article {
+  position: relative;
+}
+body #ldvWork .projetBox article .webHeader {
+  height: 18px;
+  width: 100%;
+  background: #a5a5a5;
+  border-radius: 5px 5px 0 0;
+}
+body #ldvWork .projetBox article .visuelMin {
+  border-bottom: 5px solid #a5a5a5;
+  position: relative;
+}
+body #ldvWork .projetBox article img {
+  width: 100%;
+}
+body #ldvWork .projetBox article .overlayVisuel {
+  background: rgba(124, 126, 172, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+}
+body #ldvWork .projetBox article .infoMin {
+  position: absolute;
+  width: 100%;
+  bottom: 25%;
+  opacity: 0;
+}
+body #ldvWork .projetBox article .infoMin h2 {
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #fff;
+  display: block;
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  width: 158px;
+  height: 42px;
+  line-height: 39px;
+  margin: 0 auto;
+}
+body #ldvWork .projetBox article .infoMin h2:hover {
+  color: #000;
+  background: #fff;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+body #ldvWork .projetBox article .infoMin h2 span {
+  opacity: 1;
+  display: block;
+  display: inline;
+}
+body #ldvWork .projetBox article .infoMin h2 i {
+  opacity: 0;
+  display: none;
+}
+body #ldvWork .projetBox article .infoMin h2:hover i,
+body #ldvWork .projetBox article .infoMin h2:active i {
+  opacity: 1;
+  display: block;
+  display: inline;
+  font-size: 25px;
+}
+body #ldvWork .projetBox article .infoMin h2:hover span,
+body #ldvWork .projetBox article .infoMin h2:active span {
+  opacity: 0;
+  display: none;
+}
+body #ldvWork .voodooWork {
+  background: rgba(255, 255, 255, 0.6);
+  width: 90%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-left: 9px #F51E1E solid;
+}
+body #ldvProject {
+  color: #111111;
+}
+body #ldvProject .banner {
+  position: relative;
+  height: 314px;
+  width: 100%;
+  border: 5px solid #111111;
+  border-right: none;
+  border-left: none;
+  margin-bottom: 50px;
+}
+body #ldvProject h1 {
+  position: relative;
+  text-transform: uppercase;
+  margin: 0 auto;
+  top: 118px;
+  font-size: 50px !important;
+  background: #fff;
+  color: #111111 !important;
+  width: 60%;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #fff;
+  display: block;
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+}
+body #ldvProject h1:hover {
+  color: #000;
+  background: #fff;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+body #ldvProject h1 span {
+  opacity: 1;
+  display: block;
+  display: inline;
+}
+body #ldvProject h1 i {
+  opacity: 0;
+  display: none;
+}
+body #ldvProject h1:hover i,
+body #ldvProject h1:active i {
+  opacity: 1;
+  display: block;
+  display: inline;
+  font-size: 25px;
+}
+body #ldvProject h1:hover span,
+body #ldvProject h1:active span {
+  opacity: 0;
+  display: none;
+}
+body #ldvProject .overlay {
+  width: 100%;
+  height: 304px;
+  position: absolute;
+  background: #a9a9a9;
+  opacity: 0.2;
+}
+body #ldvProject .headLine {
+  text-transform: uppercase;
+  color: #b5b5b5;
+  margin-bottom: 5px;
+  font-size: 18px;
+  padding-bottom: 6px;
+  border-bottom: 1px dotted #b5b5b5;
+}
+body #ldvProject .bodyLine {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+body #ldvProject .bodyLine a {
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #fff;
+  display: block;
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+  border-color: #111111;
+  color: #111111;
+}
+body #ldvProject .bodyLine a:hover {
+  color: #000;
+  background: #fff;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+body #ldvProject .bodyLine a span {
+  opacity: 1;
+  display: block;
+  display: inline;
+}
+body #ldvProject .bodyLine a i {
+  opacity: 0;
+  display: none;
+}
+body #ldvProject .bodyLine a:hover i,
+body #ldvProject .bodyLine a:active i {
+  opacity: 1;
+  display: block;
+  display: inline;
+  font-size: 25px;
+}
+body #ldvProject .bodyLine a:hover span,
+body #ldvProject .bodyLine a:active span {
+  opacity: 0;
+  display: none;
+}
+body #ldvProject .bodyLine a:hover {
+  background: #111111;
+  color: #fff;
+}
+body #ldvProject .prjDesc p {
+  line-height: 1.6em;
+  text-align: justify;
+  margin-top: 10px;
+}
+body #ldvProject .separator {
+  width: 80%;
+  height: 1px;
+  border: 1px dotted #b5b5b5;
+  margin: 80px auto 50px;
+}
+body #ldvProject .padded {
+  padding-bottom: 100px;
+}
+body #ldvProject .projetBox {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 80px;
+}
+body #ldvProject .projetBox .projetArt {
+  height: 257px;
+}
+body #ldvProject .projetBox .projetArt .webHeader {
+  height: 18px;
+  width: 100%;
+  background: #a5a5a5;
+  border-radius: 5px 5px 0 0;
+}
+body #ldvProject .projetBox .projetArt .visuelMin {
+  height: 100%;
+  width: 100%;
+  border: 3px solid #a5a5a5;
+  border-top: none;
+}
+body #ldvContact {
+  color: #111111;
+}
+body #ldvContact .notification {
+  margin: 0 auto;
+  width: auto;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 5px;
+  height: 20px;
+  border: 1px solid #fff;
+}
+body #ldvContact p {
+  font-size: 15px;
+  text-align: right;
+  margin-bottom: 40px;
+  font-weight: 100;
+  border-bottom: 1px solid #000;
+  padding-bottom: 15px;
+  margin-top: 50px;
+}
+body #ldvContact .form-group span {
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+  font-size: 20px;
+  margin-left: 15px;
+}
+body #ldvContact input,
+body #ldvContact textarea {
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  border-radius: 2px;
+  margin-bottom: 50px;
+  line-height: 35px;
+  padding-left: 15px;
+}
+body #ldvContact textarea {
+  line-height: 20px;
+  height: 100px;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+body #ldvContact button {
+  background: none;
+  margin-bottom: 15px;
+  width: 300px;
+  height: 42px;
+  margin: 0 auto;
+  background: #fff;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #fff;
+  display: block;
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+  border-color: #111111;
+  color: #111111;
+}
+body #ldvContact button:hover {
+  color: #000;
+  background: #fff;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+body #ldvContact button span {
+  opacity: 1;
+  display: block;
+  display: inline;
+}
+body #ldvContact button i {
+  opacity: 0;
+  display: none;
+}
+body #ldvContact button:hover i,
+body #ldvContact button:active i {
+  opacity: 1;
+  display: block;
+  display: inline;
+  font-size: 25px;
+}
+body #ldvContact button:hover span,
+body #ldvContact button:active span {
+  opacity: 0;
+  display: none;
+}
+body #ldvContact button:hover {
+  background: #111111;
+  color: #fff !important;
+}
+body #ldvAbout {
+  color: #111111;
+}
+body #ldvAbout h1 {
+  width: 600px;
+  padding-bottom: 15px;
+  border-bottom: 1px dotted #000;
+  font-weight: 100;
+  font-size: 50px;
+  margin: 0 auto;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 15px;
+}
+body #ldvAbout .goCV {
+  border-color: #111111 !important;
+  color: #111111 !important;
+  width: 250px;
+  padding: 5px 0;
+  margin: 60px auto 60px;
+  height: 40px;
+  line-height: 26px;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #fff;
+  display: block;
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+}
+body #ldvAbout .goCV:hover {
+  color: #000;
+  background: #fff;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+body #ldvAbout .goCV span {
+  opacity: 1;
+  display: block;
+  display: inline;
+}
+body #ldvAbout .goCV i {
+  opacity: 0;
+  display: none;
+}
+body #ldvAbout .goCV:hover i,
+body #ldvAbout .goCV:active i {
+  opacity: 1;
+  display: block;
+  display: inline;
+  font-size: 25px;
+}
+body #ldvAbout .goCV:hover span,
+body #ldvAbout .goCV:active span {
+  opacity: 0;
+  display: none;
+}
+body #ldvAbout .skills,
+body #ldvAbout .histo {
+  margin-bottom: 50px;
+}
+body #ldvAbout ul {
+  padding-top: 10px;
+}
+body #ldvAbout ul li {
+  padding: 0 20px 0 50px;
+  border-left: 1px solid #111111;
+}
+body #ldvAbout ul li.separatorLi {
+  width: 40%;
+  height: 40px;
+  text-align: center;
+  border: none;
+  margin: 5px auto;
+}
+body #ldvAbout p a {
+  color: #b5b5b5;
+  text-decoration: overline;
+}
+body #ldvAbout p a:hover,
+body #ldvAbout p a:active {
+  color: #111111;
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+}

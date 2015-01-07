@@ -1,0 +1,52 @@
+<div id="ldvProject">
+	<div class="container">
+		
+		<div class="row">
+			<div class="banner" style="background : url('{{projet.media[1]}}') center no-repeat">
+				<div class="overlay"></div>
+				<h1>{{projet.nom}}</h1>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-2 col-md-offset-1">
+				<div class="prjDate">
+					<div class="headLine">Date : </div>
+					<div class="bodyLine">{{projet.date}}</div>
+				</div>
+				<div class="prjLink">
+					<div class="headLine">Lien : </div>
+					<div class="bodyLine"><a href="{{projet.url}}">{{projet.nom}}</a></div>
+				</div>
+			</div>
+			<div class="col-md-6 col-md-offset-2">
+				<div class="prjDesc">
+					<div class="headLine">Contexte : </div>
+					<p>{{projet.description}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="separator"></div>
+	<div class="container">
+		<div class="row padded">
+			<div ng-repeat="miniature in projet.miniatures track by $index" ng-class="($index %2 == 0) ? 'col-md-5 col-md-offset-1' : 'col-md-5'">
+
+				<div class="projetBox">
+					<article class="projetArt">
+						<div class="webHeader"></div>
+						<div class="visuelMin">
+							<img src="{{miniature}}" width="100%">
+						</div>
+					</article>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+
+</div>
+
+

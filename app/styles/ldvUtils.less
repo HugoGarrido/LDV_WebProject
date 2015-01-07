@@ -1,0 +1,115 @@
+//ClearFix
+.group{
+	&:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}	
+}
+
+.hidden{
+	opacity: 0;
+	display: none;
+}
+
+.visible{
+	opacity: 1;
+	display: block;
+}
+
+.visibleInline{
+	.visible;
+	display: inline;
+}
+
+
+.borderedContainerIntroState{
+	position: absolute;
+	top: 0;
+	z-index: 100;
+}
+
+
+.animate{
+	transition : all 0.5s linear;
+}
+
+.ldv-btn{
+	text-decoration: none;
+	text-align: center;
+	border: 1px solid #fff;
+	display: block;
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+
+	&:hover{
+		color : #000;
+		background: #fff;
+		transition-duration : 0.2s;
+		transition-timing-function : ease-out;
+	}
+
+	span{
+		.visibleInline;
+	}
+
+	i{
+		.hidden;
+	}
+
+	&:hover i, &:active i{
+		.visibleInline;
+		font-size: 25px;
+	}
+
+	&:hover span, &:active span{
+		.hidden
+	}
+}
+
+.headLine{
+	text-transform: uppercase;
+	color: #b5b5b5;
+	margin-bottom: 5px;
+	font-size: 18px;
+	padding-bottom: 6px;
+	border-bottom: 1px dotted #b5b5b5;
+}
+
+.scaledContainer{
+	transform: scale(0.95, 0.95);
+}
+
+.btnMenuShowHide{
+	font-size: 3.1em;
+	font-size: 44px;
+	height: 100%;
+	width: 100%;
+	display: block;
+	line-height: 50px;
+	color : #000;
+	border: 1px solid transparent;
+	//background: transparent;
+
+	&:hover, &:active{
+		border: 1px solid black;
+		//background: #000;
+		//color : #fff;
+		.animate;
+	}
+}
+
+
+letscroll{
+	from {margin-top: -15px;}
+    to {margin-top: 15px;}
+}
+
+.shapeTriangle{
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid #fff;
+}

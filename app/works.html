@@ -1,0 +1,25 @@
+<div id="ldvWork">
+	<div class="theWorks">
+		<div class="container">
+			<div class="row">
+				<div  class="col-md-6 " ng-repeat="work in works">
+					<a href="#/works/{{work.clee}}" class="projetBox {{work.device}}">
+						<article class="projetArt">
+
+							<div class="webHeader"></div>
+							<div class="visuelMin">
+								<img src="{{work.media[0]}}" alt="{{work.nom}}">
+								<div class="overlayVisuel"></div>
+							</div>
+							<div class="infoMin">
+								<h2>
+									{{work.nom}}
+								</h2>
+							</div>
+						</article>
+					</a>
+				</div>
+			</div>	
+		</div>	
+	</div>
+</div>

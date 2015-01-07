@@ -1,0 +1,79 @@
+.projetBox{
+	display: block;
+	margin: 0 auto 60px;
+	height: auto;
+	width: auto;
+	text-decoration: none; 
+	
+	&:hover, &:active{
+		.animate;
+
+		.overlayVisuel{
+			background : rgba(75, 75, 75, 0.6);
+			.animate;
+			transition-duration : 0.2s;
+		}
+	
+		.infoMin{
+			///.visible;
+			bottom : 40%;
+			opacity: 1;
+			.animate;
+			transition-duration : 0.2s;
+
+			h2{
+				.animate;
+				background-color: #fff; 
+				color : @black-voodoo;
+				transition-duration : 0.1s;
+			}
+		}
+	}
+
+	article{
+
+		position: relative;
+
+		.webHeader{
+			height: 18px;
+			width: 100%;
+			background: @work-voodoo;
+			border-radius: 5px 5px 0 0;
+		}
+
+		.visuelMin{
+			border-bottom: 5px solid @work-voodoo;
+			position: relative;
+		}
+
+		img{
+			width: 100%;
+		}
+
+		.overlayVisuel{
+			background : rgba(124, 126, 172, 0);
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+		}
+
+		.infoMin{
+
+			position: absolute;
+			width: 100%;
+			bottom : 25%;
+			opacity: 0;
+			//.hidden;
+
+			h2{
+				.ldv-btn;
+				text-transform: uppercase;
+				width: 158px;
+				height: 42px;
+				line-height: 39px;
+				margin: 0 auto;				
+			}
+		}
+	}	
+}

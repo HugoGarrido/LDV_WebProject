@@ -1,0 +1,60 @@
+#ldvAbout{
+	color : @black-voodoo;
+
+	h1{
+		width: 600px;
+		padding-bottom: 15px;
+		border-bottom: 1px dotted #000;
+		font-weight: 100;
+		font-size: 50px;
+		margin: 0 auto;
+		line-height: 50px;
+		text-align: center;
+		margin-top: 15px;
+	}
+
+	.goCV{
+		border-color: @black-voodoo !important;
+		color: @black-voodoo !important;
+		width: 250px;
+		padding: 5px 0;
+		margin: 60px auto 60px;
+		height: 40px;
+		line-height: 26px;
+		.ldv-btn;
+		.animate;
+	}
+
+	.skills, .histo{
+	margin-bottom: 50px;
+	}
+
+	.headLine{};
+
+	ul{
+		padding-top: 10px;
+		li{
+			padding: 0 20px 0 50px;
+			border-left: 1px solid @black-voodoo;
+			&.separatorLi{
+				width: 40%;
+				height: 40px;
+				text-align: center;
+				border : none;
+				//border: 1px solid @black-voodoo;
+				margin: 5px auto;
+			}
+		}
+	}
+
+	p{
+		a{
+			color: #b5b5b5;
+			text-decoration: overline;
+			&:hover, &:active{
+				color: @black-voodoo;
+				.animate;
+			}
+		}
+	}
+}

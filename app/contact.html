@@ -1,0 +1,54 @@
+<div id="ldvContact">
+	<div class="container">
+		<div class="alert alert-info row" ng-show="sent">
+			<div class="notification">
+				<p>Message envoyé!</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<p>N'hésitez pas à me contacter et je vous répondrais dans les plus brefs délais !</p>
+			</div>
+		</div>
+		<form name="applyForm" ng-submit="doApply()" style="color : #000">
+			<div class="row">
+				<div class="form-group col-md-6 col-md-offset-3">
+					<label>
+						<span>Nom</span>
+						<input type="text" name="name" ng-model="apply.name" required/>
+						<div class="form-error" ng-show="applyForm.name.$touched && applyForm.name.$invalid">Invalid format</div>
+					</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="form-group col-md-6 col-md-offset-3">
+					<label>
+						<span>Email</span>
+						<input type="email" name="email" ng-model="apply.email" placeholder="exemple@domaine.fr" required/>
+						<div class="form-error" ng-show="applyForm.message.$touched && applyForm.email.$error.email">Invalid format</div>
+						<div class="form-error" ng-show="applyForm.message.$touched && applyForm.email.$error.required">Email required</div>
+					</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="form-group col-md-6 col-md-offset-3">
+					<label>
+						<span>Message</span>
+						<textarea name="message" ng-model="apply.message"></textarea>
+					</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<button  class="btn" type="submit" ng-disabled="applyForm.$invalid || sent" name="submit" required>Envoyer</button>
+				</div>
+			</div>
+			
+		</form>	
+	</div>
+</div>
+
+
