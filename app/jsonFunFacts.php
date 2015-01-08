@@ -16,7 +16,7 @@ $funfacts = array(
 
 		array('_id' => '008' , 'descriptionF' => "La première série de comics que j'ai complété, c'était les Shock Rockets, une mini avec des vaisseaux extraterrestes."),
 
-		array('_id' => '009' , 'descriptionF' => "Si vous ne savez pas quoi lire, lisez Amer Beton de ..."),
+		array('_id' => '009' , 'descriptionF' => "Si vous ne savez pas quoi lire, lisez Amer Beton de Taiyo Matsumoto"),
 
 		array('_id' => '010' , 'descriptionF' => "J'aime aller au bout des choses, j'ai été jusqu'à la ceinture blanche-jaune en Judo"),
 

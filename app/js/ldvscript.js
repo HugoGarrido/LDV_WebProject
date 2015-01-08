@@ -11,6 +11,13 @@ $(document).ready(function(){
 		return false;
 	});
 
+	//Removing slide Intro when needed
+	removeLdvIntro(location.hash);
+
+	window.onhashchange = function(){
+		removeLdvIntro(location.hash);
+	}
+	
 
 
 	//Hidding by clicking the button
@@ -26,7 +33,7 @@ $(document).ready(function(){
 		tl3 = new TimelineLite();
 		ldvMenuActionHide(tl3);
 		//Pas de rechargement avec angular donc on doit hack en timant l'event de changement de page 
-		setTimeout(function() {window.location = href;}, 2100);
+		setTimeout(function() {window.location = href;}, 1600);
 		return false;
 	});
 
@@ -154,3 +161,10 @@ function increPrjt() {
 		}
 	};
 };
+
+//Suppression du slide d'intro quand on n'arrive pas depuis le template yoh
+function removeLdvIntro(hash){
+	if(hash != "#/"){
+		$("#ldvIntro").remove()
+	}
+}
